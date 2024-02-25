@@ -1,0 +1,38 @@
+/* PostsPage.css */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .post {
+    width: calc(33.33% - 20px); /* Three posts per row with some gap */
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .post img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .post h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .post p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }

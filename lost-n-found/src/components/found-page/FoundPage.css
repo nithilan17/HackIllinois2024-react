@@ -38,7 +38,7 @@ textarea {
   }
   
   button {
-    background-color: #4caf50;
+    background-color: #13294B;
     color: #fff;
     padding: 10px;
     border: none;
@@ -47,7 +47,7 @@ textarea {
   }
   
   button:hover {
-    background-color: #45a049;
+    background-color: #d86421da;
   }
   
   /* FoundPage.css */
@@ -59,11 +59,27 @@ textarea {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #4caf50;
+  background-color: #13294B;
   color: #fff;
   padding: 20px;
   border-radius: 5px;
   animation: fadeInOut 3s ease-in-out;
+}
+
+.error-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #d9534f; /* Bootstrap's danger color */
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+.error-message {
+  color: #ffffff;
 }
 
 .back-button {
@@ -72,16 +88,32 @@ textarea {
   left: -42px; /* Adjust as needed */
   padding: 9px 9px;
   text-decoration: none; /* Removes underline from link */
-  background-color: #007bff; /* Example button color */
-  color: white; /* Text color */
+  background-color: #003366; /* Example button color */
+  color: rgb(255, 255, 255); /* Text color */
   border-radius: 5px; /* Optional: for rounded corners */
-  font-size: 10px;
+  font-size: 15px;
 }
 
 .back-button:hover {
-  background-color: #0056b3; /* Darker shade on hover for feedback */
+  background-color: #d86421da; /* Darker shade on hover for feedback */
   text-decoration: none; /* Ensures no underline on hover */
   color: white;
+}
+
+.navigation-button {
+    background-color: #003366;
+    margin-top: 50px;
+}
+
+.required-field::before {
+  content: '*';
+  color: red;
+  margin-right: 4px;
+}
+
+.upload-margin {
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 

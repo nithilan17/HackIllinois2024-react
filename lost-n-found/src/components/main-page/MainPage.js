@@ -3,20 +3,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './MainPage.css';
+import Header from '../header/Header';
 
 const MainPage = () => {
   return (
+    <div>
+      <Header />
     <div className="container">
-      <h1>Main Page</h1>
-      <p>Welcome to the main page!</p>
+      <h3>Find your lost items at UIUC!</h3>  
 
-      <Link to="/lost">
-        <button className="navigation-button">Go to Lost Page</button>
+      <Link to="/lost/">
+        <button className="navigation-button">Lost something?</button>
       </Link>
 
-      <Link to="/found">
-        <button className="navigation-button">Go to Found Page</button>
+      <Link to="/found/">
+        <button className="navigation-button">Found Something?</button>
       </Link>
+    </div>
     </div>
   );
 };

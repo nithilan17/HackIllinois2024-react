@@ -8,20 +8,3 @@
   /* Other styles as needed */
   }
   
-  .back-button {
-    position: absolute;
-    top: -42px; /* Adjust as needed */
-    left: -42px; /* Adjust as needed */
-    padding: 9px 9px;
-    text-decoration: none; /* Removes underline from link */
-    background-color: #003366; /* Example button color */
-    color: white; /* Text color */
-    border-radius: 5px; /* Optional: for rounded corners */
-    font-size: 10px;
-  }
-  
-  .back-button:hover {
-    background-color: #003366; /* Darker shade on hover for feedback */
-    text-decoration: none; /* Ensures no underline on hover */
-    color: white;
-  }
