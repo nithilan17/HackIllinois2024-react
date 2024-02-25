@@ -3,14 +3,10 @@
   display: flex;
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
+  display: flex;  
   flex-direction: column;
   align-items: center;
   margin-top: 150px;
-}
-
-.lost-items-container {
-  flex-direction: column;
-  align-items: center;
 }
 
 .lost-item {
@@ -43,15 +39,6 @@
   padding-right: 20px;
   font-size: 1rem;
   color: #666;
-}
-
-.lost-item-header {
-  display: flex;
-  margin-top: 20px;
-}
-
-.lost-item-column {
-  flex-direction: column;
 }
 
 .count {

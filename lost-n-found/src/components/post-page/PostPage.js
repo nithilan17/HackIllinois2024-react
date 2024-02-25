@@ -101,19 +101,19 @@ function ParseLocation(lostItem) {
 
 return (
     <div className="container1">
-      <Link to="/" className="back-button">&lt; Go Back</Link>
+        <Link to="/" className="back-button">&lt; Go Back</Link>
         <h1>Lost Items</h1>
         <div>
-        <h3>There are {lostItems.length} items that match your specifications</h3>
+            <h3>There are {lostItems.length} items that match your specifications</h3>
         </div>
         {lostItems.map((lostItem) => (
           <div key={lostItem.id} className='lost-item'>
-          <img src={lostItem.imageUrl} alt={lostItem.item} />
-          <div>
-            <h3>Item: {ParseItem(lostItem)}</h3>
-            <h3>Location: {ParseLocation(lostItem)}</h3>
-            <h5>Comments: {lostItem.comments}</h5>
-          </div>
+            <img src={lostItem.imageUrl} alt={lostItem.item} />
+            <div>
+                <h3>Item: {ParseItem(lostItem)}</h3>
+                <h3>Location: {ParseLocation(lostItem)}</h3>
+                <h5>Comments: {lostItem.comments}</h5>
+            </div>
         </div>
         
         ))}
