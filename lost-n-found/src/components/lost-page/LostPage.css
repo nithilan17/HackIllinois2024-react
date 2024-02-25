@@ -1,0 +1,27 @@
+.container {
+    position: relative;
+  padding: 20px; /* This adds space inside the container, making the content not stick to the border */
+  margin: 20px; /* This adds space outside the container, giving it some breathing room within its parent element */
+  border: 60px solid rgb(255, 255, 255); /* Adjust the size (5px) as needed */
+  background-color: rgb(255, 255, 255); /* Just an example, adjust the background color as needed */
+  border-radius: 10px; /* Optional: if you want rounded corners */
+  /* Other styles as needed */
+  }
+  
+  .back-button {
+    position: absolute;
+    top: -42px; /* Adjust as needed */
+    left: -42px; /* Adjust as needed */
+    padding: 9px 9px;
+    text-decoration: none; /* Removes underline from link */
+    background-color: #003366; /* Example button color */
+    color: white; /* Text color */
+    border-radius: 5px; /* Optional: for rounded corners */
+    font-size: 10px;
+  }
+  
+  .back-button:hover {
+    background-color: #003366; /* Darker shade on hover for feedback */
+    text-decoration: none; /* Ensures no underline on hover */
+    color: white;
+  }

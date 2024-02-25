@@ -1,0 +1,95 @@
+/* FoundPageForm.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  /* FoundPage.css */
+
+textarea {
+    resize: none;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 8px;
+  }
+  
+  select, textarea {
+    margin-bottom: 16px;
+    padding: 8px;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* FoundPage.css */
+
+/* ... existing styles */
+
+.thank-you-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4caf50;
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+.back-button {
+  position: absolute;
+  top: -42px; /* Adjust as needed */
+  left: -42px; /* Adjust as needed */
+  padding: 9px 9px;
+  text-decoration: none; /* Removes underline from link */
+  background-color: #007bff; /* Example button color */
+  color: white; /* Text color */
+  border-radius: 5px; /* Optional: for rounded corners */
+  font-size: 10px;
+}
+
+.back-button:hover {
+  background-color: #0056b3; /* Darker shade on hover for feedback */
+  text-decoration: none; /* Ensures no underline on hover */
+  color: white;
+}
+
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  25%, 75% {
+    opacity: 1;
+  }
+}

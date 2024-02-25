@@ -1,0 +1,21 @@
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: #003366;
+    color: white;
+    display: flex;
+    font-size: 25px;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-bottom: 230px;
+    padding-top: 80px;
+  }
+
+.subheader {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;    
+}

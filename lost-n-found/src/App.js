@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
+// import db from ./firebase;
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import MainPage from './components/main-page/MainPage'
+import LostPage from './components/lost-page/LostPage'
+import FoundPage from './components/found-page/FoundPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/lost/" element={<LostPage />} />
+        <Route path="/found/" element={<FoundPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
