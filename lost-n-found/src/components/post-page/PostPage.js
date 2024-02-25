@@ -1,10 +1,9 @@
-
-
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore';
 import { getStorage, ref, getDownloadURL } from 'firebase/storage';
 import { initializeApp } from 'firebase/app';
+import { Link } from 'react-router-dom';
 import './PostPage.css';
 import firebaseConfig from '../../firebase.js';
 
@@ -25,7 +24,6 @@ const PostPage = () => {
       try {
         if (!db || !storage || !lostItem || !lostLocation) return;
 
-        // Query Firestore to get lost items based on item and location
         const q = query(
           collection(db, 'Lost Items'),
           where('item', '==', lostItem),
@@ -36,14 +34,9 @@ const PostPage = () => {
 
         const lostItemsList = [];
 
-        // Iterate through the documents and fetch additional details
         for (const doc of querySnapshot.docs) {
           const data = doc.data();
-
-          // Fetch image URL from Storage
           const imageUrl = await getDownloadURL(ref(storage, data.imageUrl));
-
-          // Create a lost item object with all details
           const lostItem = {
             id: doc.id,
             item: data.item,
@@ -51,7 +44,6 @@ const PostPage = () => {
             comments: data.comments,
             imageUrl,
           };
-
           lostItemsList.push(lostItem);
         }
 
@@ -64,19 +56,67 @@ const PostPage = () => {
     fetchLostItems();
   }, [db, storage, lostItem, lostLocation]);
 
-  return (
-    <div className="container">
-      <h1>Lost Items</h1>
-      <div className="lost-items-container">
+  function ParseItem(lostItem) {
+    switch (lostItem.item) {
+        case 'WalletiCard':
+          return "Wallet / iCard";
+        case 'Keys':
+          return "Keys";
+        case 'Clothing':
+          return "Clothing";
+        case 'Devices':
+          return "Devices";
+        case 'BooksAcademicMaterial':
+            return "Books / Academic Material";
+        case 'WaterBottle':
+            return "Water Bottle";
+        case 'Misc':
+            return "Miscellaneous";
+    }
+}
+
+function ParseLocation(lostItem) {
+  switch (lostItem.location) {
+      case 'ActivitiesRecreationCenter':
+        return "Activities Recreation Center (ARC)"
+        case 'BusinessInstructionalFacility':
+        return "Business Instructional Facility (BIF)"
+        case 'CampusInstructionalFacility':
+          return "Campus Instructional Facility (CIF)"
+        case 'CampusRecreationCenterEast':
+          return 'Campus Recreation Center East (CRCE)'
+        case 'IlliniUnion':
+          return 'IlliniUnion'
+        case 'MainLibrary':
+          return 'Main Library'
+        case 'SiebelCenterForDesign':
+          return 'Siebel CenterForDesign'
+        case 'SiebelCenterForComputerScience':
+           return "Siebel Center for Computer Science"  
+        case 'Other':
+          return "Other";   
+         
+  }
+}
+
+return (
+    <div className="container1">
+      <Link to="/" className="back-button">&lt; Go Back</Link>
+        <h1>Lost Items</h1>
+        <div>
+        <h3>There are {lostItems.length} items that match your specifications</h3>
+        </div>
         {lostItems.map((lostItem) => (
-          <div key={lostItem.id} className="lost-item">
-            <img src={lostItem.imageUrl} alt={lostItem.item} />
-            <h3>{lostItem.item}</h3>
-            <p>{lostItem.location}</p>
-            <p>{lostItem.comments}</p>
+          <div key={lostItem.id} className='lost-item'>
+          <img src={lostItem.imageUrl} alt={lostItem.item} />
+          <div>
+            <h3>Item: {ParseItem(lostItem)}</h3>
+            <h3>Location: {ParseLocation(lostItem)}</h3>
+            <h5>Comments: {lostItem.comments}</h5>
           </div>
+        </div>
+        
         ))}
-      </div>
     </div>
   );
 };

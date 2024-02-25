@@ -1,5 +1,51 @@
 /* MainPage.css */
 
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+}
+
+.motto {
+    font-size: 30px;
+    margin-bottom: 70px;
+}
+
+h3 {
+  color: #003366;
+}
+
+.navigation-button {
+  background-color: #003366;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 18px;
+  margin: 20px 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.navigation-button:hover {
+  background-color: #d86421;
+}
+
+/* OG code */
+
+/*
 .container {
     max-width: 600px;
     margin: 0 auto;
@@ -23,4 +69,4 @@
   .navigation-button:hover {
     background-color: #d86421da;
   }
-  
+  */

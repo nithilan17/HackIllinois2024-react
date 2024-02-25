@@ -84,7 +84,7 @@ const submitForm = async () => {
     }, 3000);
   } catch (error) {
     console.error('Error submitting form:', error);
-      setErrorMessage('An error occurred. Please try again.'); // Set generic error message
+      setErrorMessage('An error occurred. Please try again.'); 
       setShowPopup(true);
 
       // Hide the popup after a few seconds
@@ -102,6 +102,15 @@ const submitForm = async () => {
       <Link to="/" className="back-button">&lt; Go Back</Link>
 
       <form>
+        <label htmlFor="image" className='upload-margin required-field'>Upload Image:</label>
+        <input
+          type="file"
+          id="image"
+          name="image"
+          accept="image/*"
+          onChange={handleImageChange}
+        />
+
         <label htmlFor="item" className='upload-margin required-field'>Item:</label>
         <select
           id="item"
@@ -148,15 +157,6 @@ const submitForm = async () => {
           maxLength="100"
           placeholder="Returned to arc front desk"
         ></textarea>
-
-        <label htmlFor="image" className='upload-margin required-field'>Upload Image:</label>
-        <input
-          type="file"
-          id="image"
-          name="image"
-          accept="image/*"
-          onChange={handleImageChange}
-        />
 
         <button type="button" className='navigation-button' onClick={submitForm}>
           Submit

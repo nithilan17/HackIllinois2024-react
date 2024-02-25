@@ -10,7 +10,7 @@ const MainPage = () => {
     <div>
       <Header />
     <div className="container">
-      <h3>Find your lost items at UIUC!</h3>  
+      <h3 className='motto'>Find your lost items at UIUC!</h3>  
 
       <Link to="/lost/">
         <button className="navigation-button">Lost something?</button>
@@ -19,6 +19,7 @@ const MainPage = () => {
       <Link to="/found/">
         <button className="navigation-button">Found Something?</button>
       </Link>
+      
     </div>
     </div>
   );

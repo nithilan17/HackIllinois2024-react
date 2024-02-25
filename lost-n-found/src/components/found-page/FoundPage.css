@@ -83,22 +83,23 @@ textarea {
 }
 
 .back-button {
-  position: absolute;
-  top: -42px; /* Adjust as needed */
-  left: -42px; /* Adjust as needed */
-  padding: 9px 9px;
-  text-decoration: none; /* Removes underline from link */
-  background-color: #003366; /* Example button color */
-  color: rgb(255, 255, 255); /* Text color */
-  border-radius: 5px; /* Optional: for rounded corners */
-  font-size: 15px;
-}
-
-.back-button:hover {
-  background-color: #d86421da; /* Darker shade on hover for feedback */
-  text-decoration: none; /* Ensures no underline on hover */
-  color: white;
-}
+    position: fixed;
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    padding: 9px 9px;
+    text-decoration: none;
+    background-color: #003366;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    font-size: 15px;
+  }
+  
+  .back-button:hover {
+    background-color: #d86421da;
+    text-decoration: none;
+    color: white;
+  }
+  
 
 .navigation-button {
     background-color: #003366;
@@ -124,4 +125,8 @@ textarea {
   25%, 75% {
     opacity: 1;
   }
+}
+
+.lost-images {
+    padding-top: 30px;
 }
